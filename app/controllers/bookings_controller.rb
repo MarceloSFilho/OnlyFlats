@@ -2,18 +2,33 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[ show edit ]
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def edit
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.flat = Flat.find(params[:flat_id])
+    authorize @booking
+    respond_to do |format|
+      if @booking.save
+        format.html { redirect_to booking_url(@booking), notice: "Booking was successfully created." }
+        format.json { render :show, status: :created, location: @booking }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @booking.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
