@@ -1,11 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="img-flat">
 
-<%= render @flat %>
+  <img src="https://images.pexels.com/photos/2459/stairs-home-….jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail" alt="Flat Image">
+  </div>
 
-<div>
-  <%= link_to "Edit this flat", edit_flat_path(@flat) %> |
-  <%= link_to "Back to flats", flats_path %>
+  <p><%= notice %></p>
 
-  <%= button_to "Destroy this flat", @flat, method: :delete %>
-  <%= link_to 'Book Now!', new_flat_booking_path(@flat), class:'btn btn-info' %>
+  <%= render @flat %>
+
+  <div class="buttons">
+    <%= link_to "Edit this flat", edit_flat_path(@flat) %> |
+    <%= link_to "Back to flats", flats_path %>
+
+    <%= button_to "Destroy this flat", @flat, method: :delete %>
+    <%= link_to 'Book Now!', new_flat_booking_path(@flat), class:'btn btn-info' %>
+  </div>
 </div>
