@@ -1,16 +1,5 @@
 // Specific CSS for your home-page
-body {
-  background-color: #f9f7f3;
-  text-align: center;
-}
 h1 {
-  color: #f7a072;
+  color: $azul-flats;
 }
 
-.carousel-inner > .carousel-item > img {
-  position: static;
-  display: none;
-  float: none;
-  width: 133%;
-  margin-left: 26%;
-}
