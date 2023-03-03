@@ -5,14 +5,20 @@
 
   <div class="form-inputs">
     <%= f.association :user %>
-    <%= f.input :title %>
-    <%= f.input :address %>
-    <%= f.input :photo %>
-    <%= f.input :price %>
+    <%= f.input :title, placeholder: "Flat Title:" %>
+    <%= f.input :address, placeholder: "Flat Adress:" %>
+    <%= f.input :photo, placeholder: "URL(flat photo):" %>
+    <%= f.input :price, placeholder: "Only Numbers:" %>
     <%= f.input :avaliable %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="align-buttons">
+      <div class="text-center">
+        <div class="btn btn-outline-danger">
+          <%= link_to "Back to flats", flats_path, class:"btn btn-back" %>
+      </div>
+        <div class="btn btn-outline-primary">
+        <%= f.button :submit %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

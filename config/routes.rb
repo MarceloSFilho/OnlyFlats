@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get "home", to: "pages#home"
   get "profile", to: "pages#profile"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  
+  get "new", to: "pages#new"
   # Defines the root path route ("/")
   # root "articles#index"
 end
