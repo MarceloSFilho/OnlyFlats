@@ -1,0 +1,13 @@
+.action {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 80vh;
+}
+
+.profile-button {
+  border-color: $azul-only;
+  width: max-content;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 25px;
+}
