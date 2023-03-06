@@ -6,11 +6,9 @@
   <% @flats.each do |flat| %>
     <%= render flat %>
     <p>
-      <%= link_to "Show this flat", flat %>
+      <%= link_to "Show this flat", flat, class:"btn-show-this-flat"%>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New flat", new_flat_path %>
-
-
+<%= link_to "New flat", new_flat_path, class:"btn-show-this-flat"%>
