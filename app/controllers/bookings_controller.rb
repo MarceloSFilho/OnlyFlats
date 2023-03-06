@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[ show edit ]
   def new
+    @flat = Flat.find(params[:flat_id])
     @booking = Booking.new
     authorize @booking
   end
@@ -20,13 +21,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.flat = Flat.find(params[:flat_id])
     authorize @booking
-    respond_to do |format|
       if @booking.save
-        format.html { redirect_to booking_url(@booking), notice: "Booking was successfully created." }
-        format.json { render :show, status: :created, location: @booking }
+         redirect_to  confirmation_path, notice: "Booking was successfully created." 
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
+         render :new, status: :unprocessable_entity
       end
     end
   end
