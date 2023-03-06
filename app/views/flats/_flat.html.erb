@@ -1,4 +1,4 @@
-<div id="<%= dom_id flat %>">
+<div class="col-4 my-4">
   <p>
     <strong>User:</strong>
     <%= flat.user_id %>
@@ -16,7 +16,9 @@
 
   <p>
     <strong>Photo:</strong>
-    <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill %>
+    <%  @flat.photo.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 300, crop: :fill %>
+    <% end %>
   </p>
 
   <p>
@@ -28,5 +30,7 @@
     <strong>Avaliable:</strong>
     <%= flat.avaliable %>
   </p>
+
+  <%= link_to "Show this flat", flat, class:"btn-show-this-flat"%>
 
 </div>

@@ -1,14 +1,15 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
 <h1>Flats</h1>
 
-<div id="flats">
+<%= link_to "New flat", new_flat_path, class:"btn-show-this-flat"%>
+
+<div id="flats" class="row">
   <% @flats.each do |flat| %>
     <%= render flat %>
-    <p>
-      <%= link_to "Show this flat", flat, class:"align-buttom-show btn-show-this-flat"%>
-    </p>
+
   <% end %>
 </div>
 
-<%= link_to "New flat", new_flat_path, class:"btn-show-this-flat"%>
+</div>
