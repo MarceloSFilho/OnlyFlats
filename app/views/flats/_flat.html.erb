@@ -16,7 +16,7 @@
 
   <p>
     <strong>Photo:</strong>
-    <%= flat.photo %>
+    <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill %>
   </p>
 
   <p>

@@ -7,6 +7,19 @@
   }
 }
 
+.btn-standard {
+  background-color: white;
+  border: 1px solid rgb(94, 94, 94);
+  border-radius: 15%;
+  padding: 15px 25px;
+  color: rgb(94, 94, 94);
+  margin: 0px 10px;
+  &:hover {
+    color: black;
+    border: 1px solid black;
+  }
+}
+
 .btn-show-this-flat {
   padding: 10px 25px;
   background-color: rgb(70, 127, 250);
