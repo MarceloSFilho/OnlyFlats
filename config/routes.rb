@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   get "home", to: "pages#home"
   get "profile", to: "pages#profile"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  
+
   get "new", to: "pages#new"
+  get "confirmation", to: "pages#confirmation"
+  get "all", to: "bookings#all", as: 'all_bookings'
   # Defines the root path route ("/")
   # root "articles#index"
 end
