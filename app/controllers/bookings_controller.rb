@@ -1,5 +1,11 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[ show edit ]
+  before_action :authenticate_user!, only: %i[ all edit create new ]
+
+  def all
+    @bookings = Booking.all_by_user(current_user)
+    authorize @bookings
+  end
   def new
     @booking = Booking.new
     authorize @booking
