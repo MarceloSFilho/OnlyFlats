@@ -2,10 +2,10 @@
 
   <p><%= notice %></p>
 
-  <%= render @flat %>
+  <%= render 'flats/flat', flat: @flat %>
 
   <div class="buttons">
-    <%= link_to "Edit this flat", edit_flat_path(@flat) if policy(@flat).edit? %> 
+    <%= link_to "Edit this flat", edit_flat_path(@flat) if policy(@flat).edit? %>
     <%= button_to "Destroy this flat", @flat, method: :delete if policy(@flat).destroy? %>
   </div>
 
