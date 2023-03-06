@@ -5,7 +5,11 @@ class BookingPolicy < ApplicationPolicy
     #   scope.all
     # end
   end
-  
+
+  def all?
+    show?
+  end
+
   def show?
     true
   end
