@@ -16,9 +16,7 @@
 
   <p>
     <strong>Photo:</strong>
-    <%  @flat.photo.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 300, crop: :fill %>
-    <% end %>
+    <%= cl_image_tag flat.photo.key, height: 300, width: 300, crop: :fill %>
   </p>
 
   <p>
