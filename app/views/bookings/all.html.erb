@@ -1,3 +1,4 @@
 <% @bookings.each do |booking| %>
   <%= booking.flat.title %>
+  <%= cl_image_tag booking.flat.photo.key, height: 400, crop: :fill %>
 <% end %>
