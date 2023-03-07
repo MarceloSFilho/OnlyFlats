@@ -1,6 +1,9 @@
 <h1>Choose your dates now</h1>
-<%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :booking_date, as: :date, order: [:day, :month, :year] %>
-  <%= f.submit class: "back-home profile-button btn btn-primary btn-lg my-auto" %>
-<% end %>
-<%= link_to "Choose another flat", flats_path, class: "profile-button btn btn-primary btn-lg my-auto" %>
+<div class="container text-center">
+  <%= simple_form_for [@flat, @booking] do |f| %>
+    <div class="row"><%= f.input :booking_date, as: :date, order: [:day, :month, :year] %></div>
+    <div class="row justify-content-md-center"><%= f.submit class: "profile-button btn btn-primary btn-lg my-auto" %>
+  <% end %>
+  <%= link_to "Choose another flat", flats_path, class: "booking-button profile-button btn btn-primary btn-lg my-auto" %>
+  </div>
+</div>
