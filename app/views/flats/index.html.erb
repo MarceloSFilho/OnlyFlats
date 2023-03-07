@@ -5,11 +5,13 @@
 
 <%= link_to "New flat", new_flat_path, class:"btn-show-this-flat"%>
 
-<div id="flats" class="row">
-  <% @flats.each do |flat| %>
+<div id="flats">
+    <% @flats.each do |flat| %>
+  <div>
     <%= render flat %>
-
-  <% end %>
+    <%= link_to "Show this flat", flat, class:"btn-show-this-flat"%>
+  </div>
+    <% end %>
 </div>
 
 </div>
