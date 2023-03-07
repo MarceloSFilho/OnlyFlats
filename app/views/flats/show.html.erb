@@ -1,17 +1,21 @@
 <div class="container">
 
   <p><%= notice %></p>
-
-  <%= render 'flats/flat', flat: @flat %>
-
-  <div class="buttons">
-    <%= link_to "Edit this flat", edit_flat_path(@flat) if policy(@flat).edit? %>
-    <%= button_to "Destroy this flat", @flat, method: :delete if policy(@flat).destroy? %>
+  <div id="flats">
+    <%= render 'flats/flat', flat: @flat %>
   </div>
+    <div class="buttons">
+      <div class="buttom-round-edit">
+        <%= link_to "+", edit_flat_path(@flat) if policy(@flat).edit? %>
+      </div>
+      <div class="buttom-round-destroy">
+        <%= link_to "-", flat_path(@flat), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} if policy(@flat).destroy? %>
+      </div>
+    </div>
 
 
-  <div class="show-buttons">
-    <%= link_to 'Book Now!', new_flat_booking_path(@flat), class: "profile-button btn btn-primary btn-lg my-auto" %>
-    <%= link_to "Back to flats", flats_path, class:"profile-button btn btn-primary btn-lg my-auto" %>
-  </div>
+    <div class="show-buttons">
+      <%= link_to 'Book Now!', new_flat_booking_path(@flat), class: "profile-button btn btn-primary btn-lg my-auto" %>
+      <%= link_to "Back to flats", flats_path, class:"profile-button btn btn-primary btn-lg my-auto" %>
+    </div>
 </div>
