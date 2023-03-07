@@ -1,36 +1,14 @@
 <div class="col-4 my-4">
-  <p>
-    <strong>User:</strong>
-    <%= flat.user_id %>
-  </p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= flat.title %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= flat.address %>
-  </p>
-
-  <p>
-    <strong>Photo:</strong>
-  </p>
-
-  <%= cl_image_tag flat.photo.key, height: 300, width: 300, crop: :fill %>
-
-
-  <p>
-    <strong>Price:</strong>
-    <%= flat.price %>
-  </p>
-
-  <p>
-    <strong>Avaliable:</strong>
-    <%= flat.avaliable %>
-  </p>
-
-  <%= link_to "Show this flat", flat, class:"btn-show-this-flat"%>
-
+  <div class="card-trip">
+    <%= cl_image_tag flat.photo.key, height: 400, crop: :fill %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= flat.title %></h2>
+      <p>Address: <%= flat.address %></p>
+    </div>
+      <h2 class="card-trip-pricing">$ <%= flat.price %></h2>
+    </div>
+  </div>
+    <%= link_to "Show this flat", flat, class:"btn-show-this-flat"%>
 </div>
