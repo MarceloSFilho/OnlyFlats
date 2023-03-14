@@ -1,6 +1,17 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #b5e2fa;
+}
+
+.navbar-lewagon .navbar-brand {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-lewagon .navbar-brand p {
+  margin-top: 3px;
+  margin-bottom: 1rem;
+  margin-left: 10px;
 }
 
 .navbar-lewagon .navbar-collapse {

@@ -1,8 +1,10 @@
 # frozen_string_literal: true
+
 class ApplicationPolicy
   before_action :authenticate_user!
   include Pundit::Authorization
 
+booking_view
   attr_reader :user, :record
 
   def initialize(user, record)
@@ -49,6 +51,7 @@ class ApplicationPolicy
     end
 
     private
+
 
     def skip_pundit?
       devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
