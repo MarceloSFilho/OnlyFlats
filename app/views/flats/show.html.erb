@@ -3,8 +3,13 @@
 
   <img src="https://images.pexels.com/photos/2459/stairs-home-….jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail" alt="Flat Image">
   </div>
-
+  
   <p><%= notice %></p>
+
+<div>
+  <%= link_to "book this flat", booking_path %>
+  <%= link_to "Edit this flat", edit_flat_path(@flat) %> |
+  <%= link_to "Back to flats", flats_path %>
 
   <%= render @flat %>
 

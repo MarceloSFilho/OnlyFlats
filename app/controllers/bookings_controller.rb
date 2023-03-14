@@ -1,5 +1,28 @@
 class BookingsController < ApplicationController
+
+  def index
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+  
   before_action :set_booking, only: %i[ show edit ]
+
+  def index
+  end
+  
   def new
     @booking = Booking.new
     authorize @booking
@@ -39,4 +62,5 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:total_price, :start_date, :end_date)
   end
 
+booking_view
 end

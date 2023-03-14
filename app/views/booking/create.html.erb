@@ -1,0 +1,8 @@
+<%= form_with model: @booking, class:"form" do |form| %>
+  <%= form.label :name %>
+  <%= form.label :address %>
+  <%= form.date :start_date %>
+  <%= form.date :end_date %>
+  <%= form.price :total_price %>
+  <%= form.submit class: "submit" %>
+<% end %>

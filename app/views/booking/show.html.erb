@@ -1,0 +1,9 @@
+<h2><%= @booking.name %></h2>
+
+<p><%= @booking.start_date %></p>
+<p><%= @booking.end_date %></p>
+<p><%= @booking.total_price %></p>
+
+<br>
+
+<%= link_to "Delete", booking_path(@booking.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure to remove #{@booking.name}?"} %>
